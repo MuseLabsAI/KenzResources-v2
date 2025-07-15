@@ -1,0 +1,764 @@
+/* Regional Operations Page Specific Styles */
+
+/* Regional Hero */
+.regional-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    padding: 150px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.regional-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,%3Csvg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="50" cy="50" r="30" fill="none" stroke="%23948979" stroke-width="0.5" opacity="0.1"/%3E%3Ccircle cx="150" cy="100" r="40" fill="none" stroke="%23948979" stroke-width="0.5" opacity="0.1"/%3E%3Ccircle cx="100" cy="150" r="35" fill="none" stroke="%23948979" stroke-width="0.5" opacity="0.1"/%3E%3C/svg%3E');
+    opacity: 0.2;
+}
+
+.regional-hero h1 {
+    font-size: 3rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.regional-hero p {
+    font-size: 1.3rem;
+    color: var(--accent);
+    position: relative;
+    z-index: 1;
+}
+
+/* Regional Introduction */
+.regional-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.regional-intro h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+.regional-intro .lead {
+    font-size: 1.2rem;
+    color: var(--secondary-dark);
+    line-height: 1.8;
+}
+
+/* Region Cards */
+.region-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.region-card {
+    background-color: var(--light);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--accent);
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.region-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.region-card .status {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.region-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.region-card li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-dark);
+    line-height: 1.5;
+}
+
+.region-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background: var(--accent);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E") center/contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* Egypt Content */
+.egypt-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.egypt-overview h3 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.egypt-overview p {
+    color: var(--secondary-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.egypt-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.highlight-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow);
+}
+
+.highlight-item h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-item p {
+    color: var(--secondary-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.egypt-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--light) 0%, #f5f5f5 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-card h4 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Sudan Content */
+.sudan-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sudan-overview h3 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sudan-overview p {
+    color: var(--secondary-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.potential-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 3rem;
+}
+
+.potential-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: var(--secondary-dark);
+    line-height: 1.6;
+}
+
+.potential-list li:last-child {
+    border-bottom: none;
+}
+
+.potential-list strong {
+    color: var(--primary-dark);
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.opportunity-card {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.opportunity-card h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.opportunity-card p {
+    color: var(--secondary-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Strategy Components */
+.strategy-components {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.strategy-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.strategy-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.strategy-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.strategy-card h3 {
+    color: var(--light);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.strategy-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Expertise Showcase */
+.expertise-showcase {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.expertise-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.expertise-intro p {
+    font-size: 1.2rem;
+    color: var(--secondary-dark);
+    line-height: 1.8;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.expertise-card {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.expertise-card h4 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.expertise-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.expertise-card li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-dark);
+    line-height: 1.5;
+}
+
+.expertise-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid var(--accent);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary-dark) 100%);
+    padding: 4rem 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: var(--light);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background-color: var(--secondary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .region-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .egypt-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .egypt-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .strategy-components {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .regional-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .regional-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .egypt-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .opportunity-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .strategy-components {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+.region-card,
+.highlight-item,
+.stat-card,
+.opportunity-card,
+.strategy-card,
+.expertise-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.region-card:nth-child(1),
+.highlight-item:nth-child(1),
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+
+.region-card:nth-child(2),
+.highlight-item:nth-child(2),
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+
+.region-card:nth-child(3),
+.highlight-item:nth-child(3),
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+
+.highlight-item:nth-child(4),
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Regional Hero Gallery */
+.regional-hero-gallery {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-regional-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-regional-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 3px solid var(--accent);
+}
+
+.hero-regional-grid img:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Regional Operations Showcase */
+.regional-operations-showcase {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.regional-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.regional-category h3 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.regional-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.regional-images {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.regional-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.regional-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow);
+}
+
+.regional-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.regional-item:hover img {
+    transform: scale(1.1);
+}
+
+.regional-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--light);
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.regional-item:hover .regional-overlay {
+    transform: translateY(0);
+}
+
+.regional-overlay h4 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.regional-overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Geological Showcase */
+.geological-showcase {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: var(--light);
+    position: relative;
+    overflow: hidden;
+}
+
+.geological-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23948979" fill-opacity="0.03"%3E%3Cpath d="M30,15 L45,30 L30,45 L15,30 Z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.4;
+}
+
+.geological-showcase .section-title {
+    color: var(--light);
+    position: relative;
+    z-index: 1;
+}
+
+.geological-showcase .section-subtitle {
+    color: var(--text-light);
+    position: relative;
+    z-index: 1;
+}
+
+.geology-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.geology-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.geology-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.geology-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.geology-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.geology-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: var(--light);
+    padding: 2rem 1rem 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.geology-item:hover .geology-overlay {
+    transform: translateY(0);
+}
+
+/* Section Subtitle Styling */
+.section-subtitle {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dark section subtitle */
+.geological-showcase .section-subtitle {
+    color: var(--text-light);
+}
+
+/* Responsive Updates */
+@media (max-width: 1024px) {
+    .hero-regional-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .regional-gallery {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .geology-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-regional-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-regional-grid img {
+        height: 150px;
+    }
+
+    .regional-item img {
+        height: 200px;
+    }
+
+    .geology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .geology-item img {
+        height: 180px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .regional-hero-gallery {
+        margin-top: 2rem;
+    }
+
+    .hero-regional-grid img {
+        height: 120px;
+        border: 2px solid var(--accent);
+    }
+
+    .regional-item img {
+        height: 180px;
+    }
+
+    .geology-item img {
+        height: 150px;
+    }
+} 

@@ -1,0 +1,819 @@
+/* Saudi Mining Page Specific Styles */
+
+/* Saudi Hero */
+.saudi-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    padding: 150px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.saudi-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,%3Csvg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"%3E%3Cpolygon points="60,20 90,40 90,80 60,100 30,80 30,40" fill="none" stroke="%23948979" stroke-width="0.5" opacity="0.1"/%3E%3C/svg%3E');
+    opacity: 0.2;
+    animation: subtle-move 20s linear infinite;
+}
+
+@keyframes subtle-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(120px); }
+}
+
+.saudi-hero h1 {
+    font-size: 3rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.saudi-hero p {
+    font-size: 1.3rem;
+    color: var(--accent);
+    position: relative;
+    z-index: 1;
+}
+
+/* Saudi Hero Gallery */
+.saudi-hero-gallery {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-mining-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-mining-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 3px solid var(--accent);
+}
+
+.hero-mining-grid img:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Vision Introduction */
+.vision-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.vision-intro h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+.vision-intro .lead {
+    font-size: 1.3rem;
+    color: var(--secondary-dark);
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* Vision Goals */
+.vision-goals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.goal-card {
+    background: linear-gradient(135deg, var(--light) 0%, #f5f5f5 100%);
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 3px solid var(--accent);
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+.goal-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.goal-card h3 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.goal-card p {
+    color: var(--secondary-dark);
+    font-size: 0.95rem;
+}
+
+/* Advantages List */
+.advantages-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.advantage-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px var(--shadow);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent);
+}
+
+.advantage-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 25px var(--shadow);
+}
+
+.advantage-item h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.advantage-item p {
+    color: var(--secondary-dark);
+    line-height: 1.6;
+}
+
+/* Minerals Showcase */
+.minerals-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.mineral-category {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.mineral-category h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.mineral-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mineral-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.mineral-item:hover {
+    background-color: var(--white);
+    transform: translateX(5px);
+}
+
+.mineral-name {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.mineral-info {
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+/* Incentives Grid */
+.incentives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.incentive-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.incentive-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.incentive-card h3 {
+    color: var(--light);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.incentive-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.incentive-card li {
+    color: var(--text-light);
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.incentive-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background: var(--accent);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E") center/contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* Shield Info */
+.shield-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.shield-content h3 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.shield-content p {
+    color: var(--secondary-dark);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.shield-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.shield-content li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-dark);
+    line-height: 1.6;
+}
+
+.shield-content li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    background: linear-gradient(135deg, #948979 0%, #393E46 100%);
+    clip-path: polygon(60% 0%, 40% 45%, 70% 45%, 30% 100%, 50% 55%, 20% 55%);
+}
+
+.shield-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-box {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: scale(1.05);
+}
+
+.stat-box h4 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Ecosystem Components */
+.ecosystem-components {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.component-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 3px solid var(--accent);
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.component-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.component-card p {
+    color: var(--secondary-dark);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary-dark) 100%);
+    padding: 4rem 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: var(--light);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background-color: var(--secondary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vision-goals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .minerals-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .incentives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ecosystem-components {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-mining-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exploration-gallery {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .operations-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .specimens-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .saudi-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .saudi-hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero-mining-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-mining-grid img {
+        height: 150px;
+    }
+    
+    .vision-goals {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .shield-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .shield-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .ecosystem-components {
+        grid-template-columns: 1fr;
+    }
+
+    .exploration-item img {
+        height: 200px;
+    }
+
+    .operation-item img {
+        height: 150px;
+    }
+
+    .specimens-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specimen-item img {
+        height: 180px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .saudi-hero-gallery {
+        margin-top: 2rem;
+    }
+
+    .hero-mining-grid img {
+        height: 120px;
+        border: 2px solid var(--accent);
+    }
+
+    .exploration-item img {
+        height: 180px;
+    }
+
+    .specimen-item img {
+        height: 150px;
+    }
+}
+
+/* Animations */
+.goal-card,
+.advantage-item,
+.mineral-category,
+.incentive-card,
+.stat-box,
+.component-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.goal-card:nth-child(1),
+.advantage-item:nth-child(1),
+.mineral-category:nth-child(1) { animation-delay: 0.1s; }
+
+.goal-card:nth-child(2),
+.advantage-item:nth-child(2),
+.mineral-category:nth-child(2) { animation-delay: 0.2s; }
+
+.goal-card:nth-child(3),
+.advantage-item:nth-child(3),
+.mineral-category:nth-child(3) { animation-delay: 0.3s; }
+
+.goal-card:nth-child(4),
+.advantage-item:nth-child(4),
+.mineral-category:nth-child(4) { animation-delay: 0.4s; }
+
+/* Exploration Showcase */
+.exploration-showcase {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exploration-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.exploration-category h3 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.exploration-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.exploration-images {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.exploration-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.exploration-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow);
+}
+
+.exploration-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.exploration-item:hover img {
+    transform: scale(1.1);
+}
+
+.exploration-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--light);
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.exploration-item:hover .exploration-overlay {
+    transform: translateY(0);
+}
+
+.exploration-overlay h4 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.exploration-overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Operations Showcase */
+.operations-showcase {
+    background: var(--primary-dark);
+    color: var(--light);
+    position: relative;
+    overflow: hidden;
+}
+
+.operations-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23948979" fill-opacity="0.05"%3E%3Cpath d="M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.3;
+}
+
+.operations-showcase .section-title {
+    color: var(--light);
+    position: relative;
+    z-index: 1;
+}
+
+.operations-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.operation-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.operation-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.operation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.operation-item:hover img {
+    transform: scale(1.05);
+}
+
+.operation-info {
+    padding: 1.5rem;
+}
+
+.operation-info h4 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.operation-info p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Specimens Gallery */
+.specimens-gallery {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: var(--light);
+    position: relative;
+    overflow: hidden;
+}
+
+.specimens-gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23948979" fill-opacity="0.03"%3E%3Cpolygon points="20,5 35,15 35,25 20,35 5,25 5,15"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.4;
+}
+
+.specimens-gallery .section-title {
+    color: var(--light);
+    position: relative;
+    z-index: 1;
+}
+
+.specimens-gallery .section-subtitle {
+    color: var(--text-light);
+    position: relative;
+    z-index: 1;
+}
+
+.specimens-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.specimen-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.specimen-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.specimen-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.specimen-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.specimen-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: var(--light);
+    padding: 2rem 1rem 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.specimen-item:hover .specimen-overlay {
+    transform: translateY(0);
+} 
