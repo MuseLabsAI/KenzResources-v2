@@ -752,6 +752,11 @@ body {
     cursor: pointer;
 }
 
+/* Specific positioning for the first image in Recent Field Activities */
+.gallery-category:last-child .image-grid img:first-child {
+    object-position: center top;
+}
+
 .image-grid img:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
