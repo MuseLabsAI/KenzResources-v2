@@ -11,6 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Password Protection Overlay -->
+    <div id="passwordOverlay" class="password-overlay">
+        <div class="password-container">
+            <div class="password-header">
+                <img src="Final KENZ Logo 2025.png" alt="KENZ Global Resources" class="password-logo">
+                <h2>Access Required</h2>
+                <p>Please enter the password to access Kenz Global Resources</p>
+            </div>
+            
+            <div class="password-form">
+                <div class="password-input-group">
+                    <input type="password" id="passwordInput" placeholder="Enter Password" class="password-input">
+                    <button onclick="checkPassword()" class="password-btn">Enter</button>
+                </div>
+                <div id="passwordError" class="password-error" style="display: none;">
+                    Incorrect password. Please try again.
+                </div>
+            </div>
+            
+            <div class="password-contact">
+                <p>For more information about Kenz Resources:</p>
+                <a href="mailto:info@kenzresources.com" class="contact-email">
+                    <i class="icon-email"></i>
+                    info@kenzresources.com
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
