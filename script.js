@@ -183,4 +183,123 @@ const currentYear = new Date().getFullYear();
 const footerYear = document.querySelector('.footer p');
 if (footerYear) {
     footerYear.innerHTML = `&copy; ${currentYear} Kenz Global Resources Ltd. All rights reserved.`;
-} 
+}
+
+// Password Protection System
+const PASSWORD = "KENZ@123";
+let isAuthenticated = false;
+
+// Check if user is already authenticated (stored in session)
+window.addEventListener('load', () => {
+    const storedAuth = sessionStorage.getItem('kenzAuthenticated');
+    if (storedAuth === 'true') {
+        isAuthenticated = true;
+        hidePasswordOverlay();
+    } else {
+        showPasswordOverlay();
+    }
+});
+
+// Show password overlay
+function showPasswordOverlay() {
+    document.body.classList.add('password-protected');
+    const overlay = document.getElementById('passwordOverlay');
+    if (overlay) {
+        overlay.classList.remove('hidden');
+    }
+    
+    // Focus on password input
+    setTimeout(() => {
+        const passwordInput = document.getElementById('passwordInput');
+        if (passwordInput) {
+            passwordInput.focus();
+        }
+    }, 100);
+}
+
+// Hide password overlay
+function hidePasswordOverlay() {
+    document.body.classList.remove('password-protected');
+    const overlay = document.getElementById('passwordOverlay');
+    if (overlay) {
+        overlay.classList.add('hidden');
+    }
+}
+
+// Check password function
+function checkPassword() {
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordError = document.getElementById('passwordError');
+    const container = document.querySelector('.password-container');
+    
+    if (!passwordInput || !passwordError || !container) return;
+    
+    const enteredPassword = passwordInput.value.trim();
+    
+    if (enteredPassword === PASSWORD) {
+        // Success animation
+        container.classList.add('success');
+        passwordError.style.display = 'none';
+        
+        // Store authentication in session
+        sessionStorage.setItem('kenzAuthenticated', 'true');
+        isAuthenticated = true;
+        
+        // Hide overlay after animation
+        setTimeout(() => {
+            hidePasswordOverlay();
+        }, 500);
+        
+    } else {
+        // Show error message
+        passwordError.style.display = 'block';
+        passwordError.textContent = 'Incorrect password. Please try again.';
+        
+        // Shake animation
+        container.style.animation = 'shake 0.5s ease-in-out';
+        setTimeout(() => {
+            container.style.animation = '';
+        }, 500);
+        
+        // Clear input and focus
+        passwordInput.value = '';
+        passwordInput.focus();
+    }
+}
+
+// Handle Enter key press in password input
+document.addEventListener('DOMContentLoaded', () => {
+    const passwordInput = document.getElementById('passwordInput');
+    if (passwordInput) {
+        passwordInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    }
+});
+
+// Add shake animation to CSS (done via JavaScript to avoid CSS conflicts)
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        75% { transform: translateX(10px); }
+    }
+`;
+document.head.appendChild(style);
+
+// Prevent access to other pages without authentication
+window.addEventListener('beforeunload', () => {
+    // Keep session alive during page navigation
+    if (isAuthenticated) {
+        sessionStorage.setItem('kenzAuthenticated', 'true');
+    }
+});
+
+// Clear authentication on browser close (optional - remove if you want longer persistence)
+window.addEventListener('beforeunload', () => {
+    // Uncomment the line below if you want to clear authentication on browser close
+    // sessionStorage.removeItem('kenzAuthenticated');
+}); 
